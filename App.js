@@ -7,7 +7,7 @@ function App() {
             <View style={styles.content}>
                 <View style={styles.textWrapper}>
                     <Text style={styles.hiText}>Xin chào</Text>
-                    <Text style={styles.userText}>NGUYỄN TẤN TOẠI</Text>
+                    <Text style={styles.userText}>Lê Trần Quan Huy</Text>
                     <Text style={styles.userText}>0985956340</Text>
                 </View>
                 <View style={styles.form}>
