@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, SafeAreaView,TextInput, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { Ionicons,Fontisto  } from "@expo/vector-icons";
 function App() {
     return (
         <SafeAreaView style={styles.container}>
@@ -11,7 +12,14 @@ function App() {
                     <Text style={styles.userText}>0985956340</Text>
                 </View>
                 <View style={styles.form}>
-                    <TextInput placeholder="Nhập mật khẩu" style={styles.inputPassword} />
+                    <Fontisto  style={styles.iconLock} name="locked" size={22} color="black" />  
+                    <TextInput 
+                        style={styles.inputPassword} 
+                        placeholder="******" 
+                        keyboardType="numberic"
+                        secureTextEntry={true}
+                        autoFocus={true}
+                    />
                     <TouchableOpacity style={styles.buttonLogin}>
                         <Text style={styles.buttonLoginText}>ĐĂNG NHẬP</Text>
                     </TouchableOpacity>
@@ -59,16 +67,23 @@ const styles = StyleSheet.create({
         fontWeight:600
     },
     form:{
+        position:'relative',
         marginLeft:25,
         marginRight:25,
         marginTop:30
+    },
+    iconLock:{
+        zIndex:10,
+        position:'absolute',
+        top:10,
+        left:20
     },
     inputPassword:{
         height:50,
         backgroundColor:'#fff',
         borderRadius:40,
         fontSize:16,
-        paddingLeft:20
+        textAlign:"center"
     },
     buttonLogin:{
         marginTop:15,
