@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, SafeAreaView,TextInput, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Ionicons,Fontisto  } from "@expo/vector-icons";
+import { Fontisto  } from "@expo/vector-icons";
 function App() {
     return (
         <SafeAreaView style={styles.container}>
@@ -8,15 +8,14 @@ function App() {
             <View style={styles.content}>
                 <View style={styles.textWrapper}>
                     <Text style={styles.hiText}>Xin chào</Text>
-                    <Text style={styles.userText}>Lê Trần Quan Huy</Text>
+                    <Text style={styles.userText}>Nguyễn Tấn Toại</Text>
                     <Text style={styles.userText}>0985956340</Text>
                 </View>
                 <View style={styles.form}>
                     <Fontisto  style={styles.iconLock} name="locked" size={22} color="black" />  
                     <TextInput 
                         style={styles.inputPassword} 
-                        placeholder="******" 
-                        keyboardType="numberic"
+                        placeholder="Nhập mật khẩu" 
                         secureTextEntry={true}
                         autoFocus={true}
                     />
@@ -67,7 +66,6 @@ const styles = StyleSheet.create({
         fontWeight:600
     },
     form:{
-        position:'relative',
         marginLeft:25,
         marginRight:25,
         marginTop:30
